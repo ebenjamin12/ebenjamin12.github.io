@@ -202,6 +202,13 @@
   .sec-rule{flex:1;height:1px;background:var(--line);align-self:center}
 
   /* ---------- about ---------- */
+  .summary{background:var(--bg-card);border:1px solid var(--line);border-radius:14px;padding:24px;margin-bottom:30px;position:relative;overflow:hidden}
+  .summary::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:linear-gradient(var(--accent),var(--accent-deep))}
+  .summary .slabel{font-family:var(--f-mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:14px;display:block}
+  .summary .lead{color:var(--fg);font-size:1.02rem;margin:0 0 16px;max-width:68ch}
+  .summary ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px}
+  .summary li{position:relative;padding-left:26px;color:var(--fg-mid);font-size:.95rem;max-width:70ch}
+  .summary li::before{content:"";position:absolute;left:4px;top:8px;width:8px;height:8px;border-radius:50%;background:var(--accent-ghost);border:1.5px solid var(--accent)}
   .about p{color:var(--fg-mid);max-width:66ch;margin:0 0 16px}
   .about p:last-child{margin-bottom:0}
   .about .tag{color:var(--accent);font-family:var(--f-mono);font-size:.92em}
@@ -336,7 +343,7 @@
           <span class="role-chip">Associate Software Engineer</span>
           <span class="role-chip">Full-Stack &amp; Backend</span>
         </div>
-        <p class="lede">I build practical software end to end &mdash; from Haskell cryptanalysis and Z3 solvers to distributed ML pipelines over millions of records. Two years shipping in a professional engineering team, now deepening the fundamentals through an MSc.</p>
+        <p class="lede">I build practical software end to end from Haskell cryptanalysis and Z3 solvers to distributed ML pipelines over millions of records. Two years shipping in a professional engineering team, now deepening the fundamentals through an MSc.</p>
         <div class="cta-row">
           <a class="btn primary" href="https://github.com/ebenjamin12" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.4-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg>
@@ -361,9 +368,18 @@
   <!-- ABOUT -->
   <section id="about" class="about reveal">
     <div class="sec-head"><span class="sec-num">01</span><h2>About</h2><span class="sec-rule"></span></div>
+    <div class="summary">
+      <span class="slabel">Professional summary</span>
+      <p class="lead">A Computer Science professional currently pursuing an MSc in Computer Science, with professional experience as an Associate Software Engineer.</p>
+      <ul>
+        <li>Contributing to software development projects within collaborative engineering teams, with practical exposure to version control, software testing, debugging, code reviews, and Agile development methodologies.</li>
+        <li>Passionate about developing reliable, maintainable software and applying structured problem-solving to technical challenges.</li>
+        <li>Currently seeking opportunities to leverage my academic and professional experience, contribute to impactful software solutions, and continue developing as a software engineer.</li>
+      </ul>
+    </div>
     <div class="about-pull">Always learning. Always building.</div>
-    <p>Hi &mdash; I'm Elisha, a Computer Science student with a real appetite for software development, systems, and problem-solving. I like building things that actually work, in languages and tools chosen because they fit the problem rather than because they're familiar.</p>
-    <p>My interests run from how things behave <span class="tag">under the hood</span> to the practical craft of shipping maintainable code. Recent work has taken me through Haskell and the Z3 theorem prover, Django web apps, and distributed machine learning with PySpark &mdash; each one picked up by building something end to end rather than reading about it.</p>
+    <p>Hi &mdash; I'm Benjamin, a Computer Science student with a real appetite for software development, systems, and problem-solving. I like building things that actually work, in languages and tools chosen because they fit the problem rather than because they're familiar.</p>
+    <p>My interests run from how things behave <span class="tag">under the hood</span> to the practical craft of shipping maintainable code. Recent work has taken me through Haskell and the Z3 theorem prover, Django web apps, and distributed machine learning with PySpark, each one picked up by building something end to end rather than reading about it.</p>
     <p>Right now I'm focused on strengthening my engineering foundations through my MSc, building a portfolio of projects I'm proud of, and finding where I can grow in the industry. Whether it's a new technology, a hard problem, or a project from scratch, I'm after the chance to get sharper.</p>
   </section>
 
@@ -375,7 +391,7 @@
         <div class="xp-role">Associate Software Engineer <span class="xp-co">&middot; ANVIPRO IT Solutions</span></div>
         <div class="xp-when">2 yrs 2 mos</div>
       </div>
-      <p class="xp-sum">Collaborated with experienced developers and cross-functional teams to support the design, development, testing, and maintenance of software solutions &mdash; an entry-level engineering role that gave me real exposure to professional practice: version control, debugging, code review, testing, and Agile delivery.</p>
+      <p class="xp-sum">Collaborated with experienced developers and cross-functional teams to support the design, development, testing, and maintenance of software solutions, an entry-level engineering role that gave me real exposure to professional practice: version control, debugging, code review, testing, and Agile delivery.</p>
       <ul>
         <li>Worked alongside senior developers and cross-functional teams to develop, test, and maintain software applications.</li>
         <li>Contributed to new features, resolved bugs, and improved the behaviour of existing functionality.</li>
@@ -396,7 +412,7 @@
           <div class="proj-name">classical-cryptanalysis-toolkit <span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17 17 7M8 7h9v9"/></svg></span></div>
           <span class="proj-kind">Haskell &middot; Python</span>
         </div>
-        <p>Classical cryptanalysis in Haskell &mdash; Caesar and Vigen&egrave;re ciphers, frequency analysis, and Kasiski examination &mdash; paired with a cryptarithm solver that encodes the puzzle as constraints for the <span class="metric">Z3 SMT solver</span> in Python. A study in doing the same kind of reasoning two ways: by hand in a pure functional language, and declaratively through a solver.</p>
+        <p>Classical cryptanalysis in Haskell: Caesar and Vigen&egrave;re ciphers, frequency analysis, and Kasiski examination, paired with a cryptarithm solver that encodes the puzzle as constraints for the <span class="metric">Z3 SMT solver</span> in Python. A study in doing the same kind of reasoning two ways: by hand in a pure functional language, and declaratively through a solver.</p>
         <div class="stack"><span>Haskell</span><span>Python</span><span>Z3 / SMT</span><span>Frequency analysis</span><span>Kasiski</span></div>
       </a>
 
@@ -417,7 +433,7 @@
             <span class="proj-kind">PySpark &middot; ML</span>
           </div>
         </div>
-        <p>A distributed PySpark ML pipeline over <span class="metric">12.2M Amazon reviews</span> predicting whether a purchase was verified &mdash; with a majority-class baseline analysis that shows exactly why a high F1 score can be misleading on imbalanced data. As much about honest evaluation as about the model.</p>
+        <p>A distributed PySpark ML pipeline over <span class="metric">12.2M Amazon reviews</span> predicting whether a purchase was verified, with a majority-class baseline analysis that shows exactly why a high F1 score can be misleading on imbalanced data. As much about honest evaluation as about the model.</p>
         <div class="stack"><span>PySpark</span><span>Spark MLlib</span><span>Python</span><span>Big Data</span><span>Model evaluation</span></div>
       </a>
 
