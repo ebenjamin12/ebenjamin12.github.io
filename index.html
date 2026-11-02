@@ -407,13 +407,14 @@
     <div class="sec-head"><span class="sec-num">03</span><h2>Selected Projects</h2><span class="sec-rule"></span></div>
     <div class="projects">
 
-      <a class="proj" href="https://github.com/ebenjamin12/classical-cryptanalysis-toolkit" target="_blank" rel="noopener">
+      <a class="proj" href="https://github.com/ebenjamin12/trident" target="_blank" rel="noopener">
         <div class="proj-top">
-          <div class="proj-name">classical-cryptanalysis-toolkit <span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17 17 7M8 7h9v9"/></svg></span></div>
-          <span class="proj-kind">Haskell &middot; Python</span>
+          <div class="proj-name">trident <span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17 17 7M8 7h9v9"/></svg></span></div>
+          <span class="proj-kind">Haskell &middot; Z3 &middot; Prolog</span>
         </div>
-        <p>Classical cryptanalysis in Haskell: Caesar and Vigen&egrave;re ciphers, frequency analysis, and Kasiski examination, paired with a cryptarithm solver that encodes the puzzle as constraints for the <span class="metric">Z3 SMT solver</span> in Python. A study in doing the same kind of reasoning two ways: by hand in a pure functional language, and declaratively through a solver.</p>
-        <div class="stack"><span>Haskell</span><span>Python</span><span>Z3 / SMT</span><span>Frequency analysis</span><span>Kasiski</span></div>
+        <p>A multi-paradigm toolkit built to answer a question coursework couldn't: when two solver paradigms can both attack a problem, which one actually wins? Four classical problems &mdash; cryptanalysis, cryptarithms, TetraVex and Blocks World &mdash; solved across Haskell, Z3/SMT and SWI-Prolog, with each pair of engines measured on identical seeded inputs.</p>
+        <p>The answer <span class="metric">reverses</span> between domains: Z3 wins TetraVex, a single static constraint system; Prolog's IDA* wins Blocks World, a search for a sequence of unknown length. The shape of the problem decides, not the quality of the tool. Every result is checked by a verifier that shares no code with either engine &mdash; enforced by a test that parses its imports &mdash; across <span class="metric">345 tests</span> and a 7-job CI matrix.</p>
+        <div class="stack"><span>Haskell</span><span>Python</span><span>Z3 / SMT</span><span>SWI-Prolog</span><span>CLP(FD)</span><span>AI planning</span><span>Benchmarking</span></div>
       </a>
 
       <a class="proj" href="https://github.com/ebenjamin12/cafe-booking-inventory-system" target="_blank" rel="noopener">
@@ -440,6 +441,36 @@
         <div class="stack"><span>PySpark</span><span>Spark MLlib</span><span>Python</span><span>Big Data</span><span>Model evaluation</span></div>
       </a>
 
+      <!-- No repository link yet, so these two render as plain cards: no dead
+           link and no arrow affordance. Once the repo is public, change the
+           wrapper to an anchor with the same class and add back the arrow span
+           used by the cards above. -->
+      <div class="proj">
+        <div class="proj-top">
+          <div class="proj-name">FinWise</div>
+          <div style="display:flex;align-items:center;gap:8px">
+            <span class="pill now" style="margin-left:0">In progress</span>
+            <span class="proj-kind">Django &middot; DRF</span>
+          </div>
+        </div>
+        <p>A personal finance management and analytics system built in Django on a three-layer architecture that keeps interface, application logic and data cleanly separated. Users record and categorise transactions, set monthly budgets that raise <span class="metric">overspending alerts</span>, and track savings goals against a target &mdash; with a Chart.js dashboard turning the raw ledger into income-vs-expense trends and spending breakdowns.</p>
+        <p>Transactions are exposed through a Django REST Framework API alongside CSV export, running on SQLite in development and PostgreSQL in production. Built with a five-person team on an Agile cycle; my focus was <span class="metric">testing and documentation</span>.</p>
+        <div class="stack"><span>Python</span><span>Django</span><span>Django REST Framework</span><span>Chart.js</span><span>SQLite</span><span>PostgreSQL</span></div>
+      </div>
+
+      <div class="proj">
+        <div class="proj-top">
+          <div class="proj-name">BillSplit</div>
+          <div style="display:flex;align-items:center;gap:8px">
+            <span class="pill now" style="margin-left:0">In progress</span>
+            <span class="proj-kind">Flask</span>
+          </div>
+        </div>
+        <p>A Flask app for households that share costs. People join a household by invite code, then add bills that split <span class="metric">equally or by custom amounts</span> &mdash; tracking per-person shares rather than a single running total, so the awkward question of who still owes what has an actual answer.</p>
+        <p>Handles recurring bills with automatic next-due-date rollover, flags overdue items, and reports settlement progress per bill and per person. Built on Flask-SQLAlchemy with Flask-Login authentication, WTForms validation, and role-based household membership.</p>
+        <div class="stack"><span>Python</span><span>Flask</span><span>SQLAlchemy</span><span>Flask-Login</span><span>WTForms</span><span>SQLite</span></div>
+      </div>
+
     </div>
   </section>
 
@@ -449,7 +480,7 @@
     <div class="skills">
       <div class="skillcard">
         <h3>Languages</h3>
-        <div class="chips"><span>Java</span><span>JavaScript (ES6+)</span><span>Python</span><span>C</span><span>C++</span><span>Haskell</span></div>
+        <div class="chips"><span>Java</span><span>JavaScript (ES6+)</span><span>Python</span><span>C</span><span>C++</span><span>Haskell</span><span>SWI-Prolog</span></div>
       </div>
       <div class="skillcard">
         <h3>Frontend</h3>
@@ -457,11 +488,11 @@
       </div>
       <div class="skillcard">
         <h3>Backend &amp; Data</h3>
-        <div class="chips"><span>Node.js</span><span>Express.js</span><span>MERN Stack</span><span>Django</span><span>MongoDB</span><span>Cassandra</span><span>PySpark</span></div>
+        <div class="chips"><span>Node.js</span><span>Express.js</span><span>MERN Stack</span><span>Django</span><span>Flask</span><span>MongoDB</span><span>Cassandra</span><span>PySpark</span><span>SQLite</span><span>PostgreSQL</span><span>Z3 / SMT</span></div>
       </div>
       <div class="skillcard">
         <h3>Tools &amp; Practice</h3>
-        <div class="chips"><span>Git</span><span>VS Code</span><span>Spring Tool Suite</span><span>Agile</span><span>Code Review</span><span>Testing</span><span>Debugging</span></div>
+        <div class="chips"><span>Git</span><span>GitHub Actions</span><span>VS Code</span><span>Spring Tool Suite</span><span>Agile</span><span>Code Review</span><span>Testing</span><span>Debugging</span></div>
       </div>
     </div>
   </section>
